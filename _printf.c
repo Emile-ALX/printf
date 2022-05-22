@@ -12,32 +12,36 @@
 
 int _printf(char *format, ...)
 {
-	unsigned int i, j;
+	unsigned int i;
 	va_list arg;
 	char *buf;
-	int (*pr_func)(va_list, unsigned int);
+	int (*pr_func)(va_list);
+	char *fmt;
 
 	va_start(arg, format);
 	buf = malloc(sizeof(char) * 1024);
-	j = 0;
-	while (format && format[i])
+	i = 0;
+	for (fmt = format; *fmt; fmt++)
 	{
-		if (format[i] == '%')
+		if (*fmt == '%')
 		{
-			i++;
-			pr_func = get_print_func(format, i);
-			j += pr_func(arg, j);
+			fmt++;
+			pr_func = get_print_func(*fmt);
+			if (pr_func != NULL)
+			{
+				i += pr_func(arg);
+			}
+			else
+			{
+				i += write(1, "Invalid conversion", 18);
+			}
 		}
 		else
 		{
-			buf[j] = format[i];
-			putchar(buf[j]);
-			j++;
+			i += _putchar(*fmt);
 		}
-		i++;
 	}
-	va_end(arg);
 	free(buf);
-
-	return (j);
+	va_end(arg);
+	return (i);
 }

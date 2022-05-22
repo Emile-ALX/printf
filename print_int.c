@@ -1,6 +1,5 @@
 #include "main.h"
 
-
 /**
  * print_int - prints an integer
  * @arg: string
@@ -8,15 +7,15 @@
  * Return: number of chars printed.
  */
 
-int print_int(va_list arg, unsigned int len)
+int print_int(va_list arg)
 {
 	char *tmp;
+	int len;
 
 	tmp = malloc(sizeof(char) * 20);
 	if (tmp != NULL)
 		_itoa(va_arg(arg, int), tmp, 10);
-	len = _strlen(tmp);
-	write(1, tmp, len);
+	len = _puts(tmp);
 	free(tmp);
 
 	return (len);
@@ -30,14 +29,10 @@ int print_int(va_list arg, unsigned int len)
  * Return: number of char printed
  */
 
-int print_uint(va_list arg, unsigned int len)
+int print_uint(va_list arg)
 {
 	unsigned int u = va_arg(arg, unsigned int);
 	char *str = convert(u, 10, 0);
 
-	len = _strlen(str);
-	write(1, str, len);
-
-	return (len);
+	return (_puts(str));
 }
-

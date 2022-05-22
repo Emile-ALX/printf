@@ -7,14 +7,14 @@
  * Return: number of chars printed.
  */
 
-int print_str(va_list arg, unsigned int len)
+int print_str(va_list arg)
 {
 	char *s = va_arg(arg, char *);
+	int len;
 
 	if (!s)
 		s = "(null)";
-	len = _strlen(s);
-	write(1, s, len);
+	len = _puts(s);
 	return (len);
 }
 
@@ -25,15 +25,13 @@ int print_str(va_list arg, unsigned int len)
  * Return: number of chars printed.
  */
 
-int print_char(va_list arg, unsigned int len)
+int print_char(va_list arg)
 {
 	char *s = va_arg(arg, char *);
 
 	if (!s)
 		s = "(null)";
-	len = _strlen(s);
-	write(1, s, len);
-	return (len);
+	return (_puts(s));
 }
 
 /**
@@ -43,13 +41,9 @@ int print_char(va_list arg, unsigned int len)
  * Return: number of chars printed.
  */
 
-
-int print_prt(va_list arg, unsigned int len)
+int print_prt(va_list arg)
 {
-	char *s = va_arg(arg, char *);
+	char s = va_arg(arg, int);
 
-	len = _strlen(s);
-	write(1, s, len);
-	return (len);
+	return (_putchar(s));
 }
-

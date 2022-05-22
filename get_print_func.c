@@ -8,7 +8,7 @@
  * Return: pointer to function
  */
 
-int (*get_print_func(char *s, unsigned int index))(va_list arg, unsigned int)
+int (*get_print_func(char s))(va_list arg)
 {
 	fmt_t pr[] = {
 		{"d", print_int},
@@ -24,7 +24,7 @@ int (*get_print_func(char *s, unsigned int index))(va_list arg, unsigned int)
 
 	for (i = 0; i < flags; i++)
 	{
-		if (*(pr[i]).fmt == s[index])
+		if (*(pr[i]).fmt == s)
 			return (pr[i].f);
 	}
 	return (NULL);

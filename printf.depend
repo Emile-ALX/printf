@@ -1,0 +1,81 @@
+# depslib dependency file v1.0
+1653019506 source:c:\users\john rumide\dev\printf\main.c
+	<limits.h>
+	<stdio.h>
+	"main.h"
+	<unistd.h>
+
+1653156817 c:\users\john rumide\dev\printf\main.h
+	<stdarg.h>
+	<unistd.h>
+
+1653156903 source:c:\users\john rumide\dev\printf\_printf.c
+	"main.h"
+	<stdio.h>
+	<string.h>
+	<stdlib.h>
+
+1653104641 source:c:\users\john rumide\dev\printf\print_hex.c
+
+1653102868 source:c:\users\john rumide\dev\printf\utils.c
+	"main.h"
+
+1653156785 source:c:\users\john rumide\dev\printf\print_int.c
+	"main.h"
+
+1653156817 source:c:\users\john rumide\dev\printf\get_printf_func.c
+	"main.h"
+
+1653156814 source:c:\users\john rumide\dev\printf\print_bin.c
+	"main.h"
+
+1653156097 source:c:\users\john rumide\dev\printf\print_str,c.c
+	"main.h"
+
+1653019877 source:c:\users\john rumide\dev\printf\_itoa.c
+	"main.h"
+
+1653089111 source:c:\users\john rumide\dev\printf\convert.c
+	"main.h"
+	<stdio.h>
+	<stdlib.h>
+	<limits.h>
+
+1653101808 source:c:\users\john rumide\dev\printf\print_str.c
+
+1653194524 source:c:\users\john rumide\dev\printf\test\printf\_printf.c
+	"main.h"
+	<stdio.h>
+	<string.h>
+	<stdlib.h>
+
+1653200324 c:\users\john rumide\dev\printf\test\printf\main.h
+	<stdarg.h>
+	<unistd.h>
+	<stdlib.h>
+
+1653194732 source:c:\users\john rumide\dev\printf\test\printf\main.c
+	<limits.h>
+	<stdio.h>
+	"main.h"
+
+1653194524 source:c:\users\john rumide\dev\printf\test\printf\converter.c
+	"main.h"
+	<stdio.h>
+	<stdlib.h>
+
+1653194524 source:c:\users\john rumide\dev\printf\test\printf\get_print_func.c
+	"main.h"
+
+1653196656 source:c:\users\john rumide\dev\printf\test\printf\print_bin.c
+	"main.h"
+
+1653196555 source:c:\users\john rumide\dev\printf\test\printf\print_int.c
+	"main.h"
+
+1653194524 source:c:\users\john rumide\dev\printf\test\printf\print_str.c
+	"main.h"
+
+1653194524 source:c:\users\john rumide\dev\printf\test\printf\utils.c
+	"main.h"
+
