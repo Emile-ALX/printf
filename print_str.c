@@ -27,7 +27,7 @@ int print_str(va_list arg, unsigned int len)
 
 int print_char(va_list arg, unsigned int len)
 {
-	char s = va_arg(arg, int);
+	char *s = va_arg(arg, char *);
 
 	if (!s)
 		s = "(null)";
@@ -46,7 +46,7 @@ int print_char(va_list arg, unsigned int len)
 
 int print_prt(va_list arg, unsigned int len)
 {
-	char s = "%";
+	char *s = va_arg(arg, char *);
 
 	len = _strlen(s);
 	write(1, s, len);

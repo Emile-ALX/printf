@@ -8,7 +8,7 @@
  * Return: pointer to function
  */
 
-int (*get_print_func(char *s, int index))(va_list arg, unsigned int)
+int (*get_print_func(char *s, unsigned int index))(va_list arg, unsigned int)
 {
 	fmt_t pr[] = {
 		{"d", print_int},

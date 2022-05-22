@@ -10,12 +10,12 @@
  * Return: The number of arguments printed
  */
 
-int _printf(const char *format, ...)
+int _printf(char *format, ...)
 {
-	int i, j;
+	unsigned int i, j;
 	va_list arg;
 	char *buf;
-	int (*pr_func)(va_list, int);
+	int (*pr_func)(va_list, unsigned int);
 
 	va_start(arg, format);
 	buf = malloc(sizeof(char) * 1024);
