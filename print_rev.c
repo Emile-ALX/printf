@@ -34,15 +34,17 @@ int print_rot13(va_list arg)
 
 	for (i = 0; *(s + i); i++)
 	{
-		for (j = 0; j < 52; j++)
+		if (s[i] < 'A' || (s[i] > 'Z' && s[i] < 'a') || s[i] > 'z')
+			_putchar(s[i]);
+		else
 		{
-			if (*(s + i) == alphabet[j])
+			for (j = 0; j < 52; j++)
 			{
-				*(s + i) = rot13[j];
-				break;
+				if (*(s + i) == rot13[j])
+					_putchar(rot13[j]);
 			}
 		}
 	}
 
-	return (_puts(s));
+	return (i);
 }
