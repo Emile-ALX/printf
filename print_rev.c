@@ -9,12 +9,17 @@
 
 int print_rev(va_list arg)
 {
+	int i, j;
 	char *s = va_arg(arg, char *);
 
 	if (!s)
 		s = "(null)";
-	strrev(s);
-	return (_puts(s));
+	for (i = 0; s[i]; i++)
+		;
+	for (j = i - 1; j >= 0; j--)
+		_putchar(s[j]);
+
+	return (i);
 }
 
 
