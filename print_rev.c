@@ -13,7 +13,7 @@ int print_rev(va_list arg)
 
 	if (!s)
 		s = "(null)";
-	rev_string(s);
+	strrev(s);
 	return (_puts(s));
 }
 
