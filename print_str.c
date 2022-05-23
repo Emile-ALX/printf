@@ -32,7 +32,6 @@ int print_char(va_list arg)
 /**
  * print_prt - prints a percentage sign
  * @arg: string
- * @len: index for buffer pointer
  * Return: number of chars printed.
  */
 
