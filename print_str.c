@@ -39,6 +39,7 @@ int print_char(va_list arg)
 int print_prt(va_list arg)
 {
 	char s = va_arg(arg, int);
+	s = '%';
 
 	return (_putchar(s));
 }
