@@ -18,8 +18,11 @@ int (*get_print_func(char s))(va_list arg)
 		{"u", print_uint},
 		{"b", print_bin},
 		{"%", print_prt},
+		{"o", print_oct},
+		{"x", print_hex},
+		{"X", print_big_hex},
 	};
-	int flags = 7;
+	int flags = 10;
 	int i;
 
 	for (i = 0; i < flags; i++)

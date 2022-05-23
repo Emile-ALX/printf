@@ -36,3 +36,18 @@ int print_uint(va_list arg)
 
 	return (_puts(str));
 }
+
+/**
+ * print_oct - prints an octal integer
+ *
+ * @arg: va_list of arguments from _printf
+ * Return: length of string printed
+ */
+
+int print_oct(va_list arg)
+{
+	unsigned int o = va_arg(arg, unsigned int);
+	char *str = convert(o, 8, 0);
+
+	return (_puts(str));
+}
