@@ -38,5 +38,8 @@ int print_char(va_list arg);
 int print_uint(va_list arg);
 int print_addr(va_list arg);
 int print_bin(va_list arg);
+int print_rev(va_list arg);
+int print_rot13(va_list arg);
+int print_bigS(va_list arg);
 
 #endif

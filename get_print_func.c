@@ -21,8 +21,10 @@ int (*get_print_func(char s))(va_list arg)
 	    {"x", print_hex},
 	    {"X", print_big_hex},
 	    {"p", print_addr},
+	    {"r", print_rev},
+	    {"R", print_rot13},
 	};
-	int flags = 11;
+	int flags = 13;
 	int i;
 
 	for (i = 0; i < flags; i++)
