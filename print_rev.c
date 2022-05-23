@@ -40,7 +40,7 @@ int print_rot13(va_list arg)
 		{
 			for (j = 0; j < 52; j++)
 			{
-				if (*(s + i) == rot13[j])
+				if (*(s + i) == alphabet[j])
 					_putchar(rot13[j]);
 			}
 		}
