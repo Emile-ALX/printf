@@ -22,10 +22,11 @@ int print_bin(va_list arg)
 }
 
 /**
- * print_bin - prints decimal in hexadecimal
+ * print_hex - prints decimal in hexadecimal
  * @arg: array of arguments
  * Return: number of chars printed.
  */
+
 int print_hex(va_list arg)
 {
 	unsigned int h = va_arg(arg, unsigned int);
@@ -35,7 +36,7 @@ int print_hex(va_list arg)
 }
 
 /**
- * @print_big_hex - prints decimal in hexadecimal
+ * print_big_hex - prints decimal in hexadecimal
  * string in uppercase
  * @arg: array of arguments
  * Return: number of chars printed.

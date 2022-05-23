@@ -3,7 +3,7 @@
 /**
  * print_int - prints an integer
  * @arg: string
- * @len: index for buffer pointer
+ *
  * Return: number of chars printed.
  */
 
@@ -24,7 +24,6 @@ int print_int(va_list arg)
 /**
  * print_uint - prints an unsigned integer
  * @arg: va_list of arguments from _printf
- * @len: buffer index
  *
  * Return: number of char printed
  */

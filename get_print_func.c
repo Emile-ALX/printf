@@ -4,7 +4,6 @@
  * get_print_func - get the correct function to perform
  * print operation
  * @s: specified format
- * @index: index for format identifier
  * Return: pointer to function
  */
 
